@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="default" namespace="" extends="struts-default">
+	
+		<action name="Index" class="com.igatepatni.actions.IndexAction">
+					<result name="success">/Home.jsp</result>
+		</action>
+		
+		<action name="Login" class="com.igatepatni.actions.LoginAction">
+			<result name="success">/UserHome.jsp</result>
+			<result name="input">/Login.jsp</result>
+			<result name="error">/Login.jsp</result>
+		</action>
+		
+		<action name="OpenAccount" class="com.igatepatni.actions.OpenAccountAction">
+			<result name="success">/Login.jsp</result>
+			<result name="input">/OpenAccount.jsp</result>
+			<result name="error">/OpenAccount.jsp</result>
+		</action>	
+		
+		<!--	
+		
+		<action name="ChangePassword" class="com.igatepatni.actions.ChangePasswordAction">
+			<result name="success">/SuccessChangePwd.jsp</result>
+			<result name="input">/ChangePassword.jsp</result>
+			<result name="error">/ChangePassword.jsp</result>
+		</action>
+		
+		<action name="FundTransfer" class="com.igatepatni.actions.FundTransferAction">
+			<result name="success">/SuccessFund.jsp</result>
+			<result name="input">/FundTransfer.jsp</result>
+			<result name="error">/FundTransfer.jsp</result>
+		</action>
+		
+		<action name="UpdatePersonalInfo" class="com.igatepatni.actions.UpdatePersonalInfoAction">
+			<result name="success">/SuccessUpdate.jsp</result>
+			<result name="input">/UpdatePersonalInfo.jsp</result>
+			<result name="error">/UpdatePersonalInfo.jsp</result>
+		</action>
+		
+		
+	-->
+	
+	</package>
+	
+</struts>

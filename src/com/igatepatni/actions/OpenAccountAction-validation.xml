@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+ 
+<validators>
+
+	<field name="firstName">
+      <field-validator type="requiredstring" short-circuit="false">
+          <message key="fname.required"/>
+      </field-validator>
+         <field-validator type="stringlength" short-circuit="false">
+			<param name="maxLength">30</param>
+			<param name="minLength">4</param>
+			<message key="fname.length"></message>
+	  </field-validator>   
+        <field-validator type="regex">
+             <param name="expression">^([A-Za-z]+)$</param>
+             <message key="name.invalid"></message>
+        </field-validator>
+	</field>
+	
+	<field name="lastName">
+      <field-validator type="requiredstring" short-circuit="false">
+          <message key="lname.required"/>
+      </field-validator>
+      <field-validator type="stringlength" short-circuit="false">
+			<param name="maxLength">30</param>
+			<param name="minLength">4</param>
+			<message key="name.length"></message>
+	  </field-validator>
+	     <field-validator type="regex">
+             <param name="expression">^([A-Za-z]+)$</param>
+             <message key="name.invalid"></message>
+        </field-validator>
+	</field>
+	
+	<field name="address">
+      <field-validator type="requiredstring" short-circuit="false">
+          <message key="address.required"/>
+      </field-validator>
+	</field>
+	
+	<field name="officeAddress">
+      <field-validator type="requiredstring" short-circuit="false">
+          <message key="office.required"/>
+      </field-validator>
+	</field>	
+		
+	<field name="mobile">
+   <field-validator type="long">
+        <param name="min">1000000000</param>
+        <param name="max">9999999999</param>
+        <message key="mobile.invalid"></message>
+   </field-validator>
+  </field>
+  
+  <field name="alternateMobileNumber">
+   <field-validator type="long">
+        <param name="min">1000000000</param>
+        <param name="max">9999999999</param>
+        <message key="amobile.invalid"></message>
+   </field-validator>
+  </field>
+  
+  <field name="amount">
+   <field-validator type="long">
+        <param name="min">500</param>
+        <message key="amount.invalid"></message>
+   </field-validator>
+  </field>
+	
+	<field name="userName">
+      <field-validator type="requiredstring" short-circuit="false">
+          <message key="username.required"/>
+      </field-validator>
+      <field-validator type="stringlength" short-circuit="false">
+			<param name="maxLength">12</param>
+			<param name="minLength">4</param>
+			<message key="username.length"></message>
+	  </field-validator>
+        <field-validator type="regex">
+             <param name="expression">^([A-Za-z0-9]+)$</param>
+             <message key="username.invalid"></message>
+        </field-validator>	  
+	</field>
+		
+	<field name="password">
+		<field-validator type="requiredstring" short-circuit="false">
+			<message key="password.required"/>
+		</field-validator>
+		<field-validator type="stringlength" short-circuit="false">
+			<param name="maxLength">12</param>
+			<param name="minLength">4</param>
+			<message key="password.length"></message>
+	  </field-validator>
+	</field>
+	
+	<field name="rePassword">
+		<field-validator type="requiredstring" short-circuit="false">
+			<message key="rpassword.required"/>
+		</field-validator>
+	</field>
+			
+</validators>

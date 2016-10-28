@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+ 
+<validators>
+
+	<field name="userName">
+      <field-validator type="requiredstring" short-circuit="false">
+          <message key="username.required"/>
+      </field-validator>
+      <field-validator type="stringlength" short-circuit="false">
+			<param name="maxLength">12</param>
+			<param name="minLength">4</param>
+			<message key="username.length"></message>
+	  </field-validator>
+	</field>
+	
+	<field name="password">
+		<field-validator type="requiredstring" short-circuit="false">
+			<message key="password.required"/>
+		</field-validator>
+		<field-validator type="stringlength" short-circuit="false">
+			<param name="maxLength">12</param>
+			<param name="minLength">4</param>
+			<message key="password.length"></message>
+	  </field-validator>
+	</field>
+	
+</validators>
